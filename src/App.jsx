@@ -1,13 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header'
+import PostList from './components/PostList'
 
 const App = () => (
   <Router>
     <div>
       <Header />
       <section className='section container content'>
-        <h1>Website build using Wordpress API and React.js</h1>
+        <Route exact path='/' component={PostList} />
       </section>
     </div>
   </Router>
